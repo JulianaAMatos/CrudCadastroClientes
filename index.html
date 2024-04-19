@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./css/modal.css">
-    <link rel="stylesheet" href="./css/records.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="./records.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <title>Crud User</title>
 </head>
@@ -30,7 +30,7 @@
                     <th>Ação</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="corpo-tabela">
                 <tr>
                     <td>Maria</td>
                     <td>Maria@maria.com</td>
@@ -50,15 +50,18 @@
                     <h2>Novo Usuário</h2>
                     <span class="modal-close" id="modalClose"> &#10006 </span>
                 </header>
+
                 <form class="modal-form">
-                    <input type="text" class="modal-field" placeholder="Nome">
-                    <input type="email" class="modal-field" placeholder="E-mail">
-                    <input type="text" class="modal-field" placeholder="Celular">
-                    <input type="text" class="modal-field" placeholder="Cidade">
+                    <input type="text" class="modal-field" id="name" placeholder="Nome" >
+                    <input type="email" class="modal-field" id="email" placeholder="E-mail" >
+                    <input type="text" class="modal-field" id="celular" placeholder="Celular"  >
+                    <input type="text" class="modal-field" id="cidade" placeholder="Cidade"  >
+                    
                 </form>
+
                 <footer class="modal-footer">
-                    <button class="button green">Salvar</button>
-                    <button class="button blue">   Cancelar </button>
+                    <button class="button green" onclick="SalvarDados()">Salvar</button>
+                    <button class="button blue">Cancelar </button>
                 </footer>
             </section>
         </div>
